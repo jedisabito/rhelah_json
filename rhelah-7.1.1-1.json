@@ -1,0 +1,22 @@
+{
+    "resources": [
+        {
+            "name": "team6-rhelah",
+            "count": "1",
+            "flavor": "m1.small",
+            "image": "rhel-atomic-cloud-7.1.1-1",
+            "user-data-files": [
+                "atomic-ci-jobs/project/cloud-init/rhelah.yaml"
+            ],
+            "metadata": {
+                "ansible_sudo": "true",
+                "ansible_ssh_user": "cloud-user"
+            },
+            "ansible": {
+                "playbooks": [
+                    "atomic-ci-jobs/project/playbooks/atomic_files.yaml"
+              ]
+            }
+        }
+   ]
+}
